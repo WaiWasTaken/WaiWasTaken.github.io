@@ -1,9 +1,10 @@
 body {
-    margin: 0;
+    margin: 10px;
     background: #2D2D2D;
     overflow-x: hidden;
     font-family: cursor, monospace;
-
+    border: #FED37E solid 2px;
+    height: 97vh;
 }
 .html {
     overflow-y: overlay;
@@ -24,7 +25,7 @@ body {
 }
 
 .input-style {
-    color: #D4D4D4;
+    color: #A9D3AB;
     background-color: transparent;
     border: none;
     outline: none;
