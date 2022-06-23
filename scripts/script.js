@@ -3,8 +3,7 @@ const commands = {
     help: "help",
     test: "test",
     clear: "clear",
-    banner: "banner",
-    game: "flappy bird"
+    banner: "banner"
 };
 
 let banner = `
