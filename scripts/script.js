@@ -19,7 +19,7 @@ let banner = `
 function terminal(ele) {
     if (event.key === 'Enter') {
         let inputValue;
-        inputValue = ele.value
+        inputValue = ele.value.toLowerCase()
         //console.log(inputValue);
         if (inputValue == "") return;
         // console.log(input);
