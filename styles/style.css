@@ -9,7 +9,15 @@ body {
 .html {
     overflow-y: overlay;
 }
-    
+  
+#main {
+    font-size: 20px
+}
+
+#banner {
+    font-size: 20px;
+}
+
 .website {
     -webkit-user-select: none;
     /* Safari */
@@ -22,6 +30,7 @@ body {
 
 .history-log {
     color: white;
+    font-size: 20px;
 }
 
 .input-style {
@@ -29,7 +38,7 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 24px;
+    font-size: 20px;
     padding: 5px;
     margin: -5px;
     text-transform: lowercase;
@@ -58,13 +67,6 @@ body {
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
-}
-
-/* White golow*/
-.features {
-    color: #FED37E;
-    text-align: center;
-    font-size: 18px;
 }
 
 
@@ -103,4 +105,57 @@ body {
   ::-webkit-scrollbar-thumb {
     background: rgba(136, 136, 136, 0.288);
     border-radius: 50px; 
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .body {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    #banner {
+        font-size: 0px;
+    }
+    .website{
+        padding: 5px;
+    }
+    .input-style {
+        font-size: 18px;
+    }
+    #input {
+        width: 100px;
+        font-size: 18px;
+    }
+    .history-log {
+        font-size: 18px;
+    }
+    #main {
+        font-size: 18px
+    }
+}
+@media only screen and (max-height: 600px) {
+    .body {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    #banner {
+        font-size: 14px;
+    }
+    .website{
+        padding: 5px;
+    }
+    .input-style {
+        font-size: 18px;
+    }
+    #input {
+        width: 100px;
+        font-size: 18px;
+    }
+    .history-log {
+        font-size: 18px;
+    }
+    #main {
+        font-size: 18px
+    }
 }

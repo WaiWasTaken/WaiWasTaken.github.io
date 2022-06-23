@@ -3,7 +3,8 @@ const commands = {
     help: "help",
     test: "test",
     clear: "clear",
-    banner: "banner"
+    banner: "banner",
+    game: "flappy bird"
 };
 
 let banner = `
@@ -26,12 +27,12 @@ function terminal(ele) {
         // "renams text whit search.. id" document.getElementById('search-results').innerHTML = input; 
 
         // TODO: add color function to input if is valid command
-        let defaultSettings = `<p class="history-log" style="margin: -5px;padding: 5px;margin-top: -10px;font-size:20px">`
-        let inputLog = `<p1 id="main" style="font-size: 20px;padding: 3px;"><font color="#FED37E">visitor</font><font color="#D4D4D4">@</font><font color="#A9D3AB">terminal</font><font color="#D4D4D4">:$ ~ ${inputValue}</font></p1>`;
+        let defaultSettings = `<p class="history-log" style="margin: -5px;padding: 5px;margin-top: -10px;">`
+        let inputLog = `<p1 id="main" style="padding: 3px;"><font color="#FED37E">visitor</font><font color="#D4D4D4">@</font><font color="#A9D3AB">terminal</font><font color="#D4D4D4">:$ ~ ${inputValue}</font></p1>`;
 
         let history = document.getElementById('history');
 
-        let newText = `<p class="history-log" style="margin: -5px;padding: 5px;margin-top: -10px;font-size:20px"><font color="#FED37E">visitor</font><font color="#D4D4D4">@</font><font color="#A9D3AB">terminal</font><font color="#D4D4D4">:$ ~ </font> <font color="#D4D4D4">${inputValue}</font></p>`;
+        let newText = `<p class="history-log" style="margin: -5px;padding: 5px;margin-top: -10px;"><font color="#FED37E">visitor</font><font color="#D4D4D4">@</font><font color="#A9D3AB">terminal</font><font color="#D4D4D4">:$ ~ </font> <font color="#D4D4D4">${inputValue}</font></p>`;
         let space = `<p style="font-size: 4px;"><font color="#2D2D2D">what a nerd</font></p>`
 
         if (inputValue == "help") {
@@ -58,11 +59,11 @@ function terminal(ele) {
             document.getElementById('input').value = "";
             return;
         } else if (inputValue == "banner") {
-           newText = `<pre id="banner" style="color: #D4D4D4; font-size: 20px;">${banner}</pre>`;
+           newText = `<pre id="banner" style="color: #D4D4D4;">${banner}</pre>`;
         }
         else {
             // returns help text
-            newText = `<p class="history-log" style="margin: -5px;padding: 5px;margin-top: -10px;font-size:20px"><font color="#FED37E">visitor</font><font color="#D4D4D4">@</font><font color="#A9D3AB">terminal</font><font color="#D4D4D4">:$ ~ </font> <font color="#D4D4D4"> Command not found. For a list of commands, type '</font><font class="glow">help</font><font color="#D4D4D4">'.</font></p>`;
+            newText = `<p class="history-log" style="margin: -5px;padding: 5px;margin-top: -10px;"><font color="#FED37E">visitor</font><font color="#D4D4D4">@</font><font color="#A9D3AB">terminal</font><font color="#D4D4D4">:$ ~ </font> <font color="#D4D4D4"> Command not found. For a list of commands, type '</font><font class="glow">help</font><font color="#D4D4D4">'.</font></p>`;
         }
 
         history.insertAdjacentHTML('beforeend', newText);
@@ -83,7 +84,7 @@ function InstaDetect(e) {
         noArgs0 = "";
     }
 
-    if (Object.values(commands).indexOf(args[0]) > -1) {
+    if (Object.values(commands).indexOf(input) > -1) {
         // console.log("command found");
         document.getElementById('input').style.color = "#A9D3AB";
     }else {
